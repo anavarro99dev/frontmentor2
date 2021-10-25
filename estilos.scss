@@ -45,9 +45,11 @@ $font_weights: 700;
 }
 
 body{
+    background-color: $main_background;
+
     margin: 15% 10%;
     width: 80vw;
-    height: 50vh;
+    height: 55vh;
 
     font-family: $font_family1;
     font-family: $font_family2;
@@ -55,25 +57,36 @@ body{
 
     display: flex;
     flex-direction: row-reverse;
-    img{
-        width: 50%;
-        border-radius: 0 10px 10px 0;
-    }
 }
 
 main{
+    background-color: $card_background;
+
     padding: 6% 9%;
     width: 50%;
     h1{
-        font-size: 2em;
-        span{font-weight: $font_weights;}
-
+        font-size: 2.5em;
+        color: $main_heading;
+        span{
+            font-weight: $font_weights;
+            color: $accent;
+        }
         margin: 5% 0;
     }
     p{
-        margin: 0;
+        margin: 10% 0;
+        color: $main_paragraph;
     }
     border-radius: 10px 0 0 10px;
+}
+
+section#imagen{
+    width: 50%;
+    border-radius: 0 10px 10px 0;
+    background-color: $accent;
+    background-image: url(images/image-header-desktop.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
 }
 
 section#encabezado{
@@ -81,16 +94,19 @@ section#encabezado{
 }
 
 section#cuerpo{
-    margin: 15% 0px;
+    margin: 10% 0px;
     p{
         display: inline-block;
         width: 32.7%;
         
-        font-size: $font_size - 5px;
         text-transform: uppercase;
+        color: $stat_headings;
+        
         span{
             font-weight: $font_weights;
             font-size: 2rem;
+            text-transform: none;
+            color: $main_heading;
         }
     }
 }
