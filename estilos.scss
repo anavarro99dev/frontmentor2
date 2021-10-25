@@ -28,29 +28,52 @@ $stat_headings: hsla(0, 0%, 100%, 0.6);
 // Body
 $font_size: 15px;
 // Font
-$family1: Inter;
-$weights1: 400, 700;
-$family2: Lexend Deca;
-$weights2: 400;
+$font_family1: 'Inter', sans-serif;;
+$font_family2: 'Red Hat Display', sans-serif;
+$font_url: 'https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Red+Hat+Display:wght@500&display=swap';
+$font_weights: 700;
 // ==========================================================================================================
 // ==========================================================================================================
 // Estilos 
 // 
 // ==========================================================================================================
 // ==========================================================================================================
+@import url($font_url);
+
 * {
     box-sizing: border-box;
 }
 
-main{
-
-}
 body{
+    margin: 15% 15%;
+    width: 80vw;
+    height: 50vh;
+
+    font-family: $font_family1;
+    font-family: $font_family2;
+    font-size: $font_size;
+
     display: flex;
     flex-direction: row-reverse;
     img{
-
+        width: 50%;
+        border-radius: 0 10px 10px 0;
     }
+}
+
+main{
+    padding: 6% 9%;
+    width: 50%;
+    h1{
+        font-size: 2em;
+        span{font-weight: $font_weights;}
+
+        margin: 5% 0;
+    }
+    p{
+        margin: 0;
+    }
+    border-radius: 10px 0 0 10px;
 }
 
 section#encabezado{
@@ -58,8 +81,17 @@ section#encabezado{
 }
 
 section#cuerpo{
+    margin: 15% 0px;
     p{
         display: inline-block;
+        width: 32.7%;
+        
+        font-size: $font_size - 5px;
+        text-transform: uppercase;
+        span{
+            font-weight: $font_weights;
+            font-size: 2rem;
+        }
     }
 }
 // ==========================================================================================================
